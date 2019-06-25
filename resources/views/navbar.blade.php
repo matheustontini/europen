@@ -12,7 +12,7 @@
             <a class="nav-link" href="#">how it works</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">log in</a>
+            <a class="nav-link" href="/login">login</a>
         </li>
     </ul>
 </nav>

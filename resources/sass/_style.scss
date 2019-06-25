@@ -51,7 +51,7 @@
         border-bottom: solid 3px #46D7E8;
     }
 }
-h2 {
+h1, h2, h3, h4 {
     color: #46D7E8;
 }
 .house_h{
@@ -70,7 +70,7 @@ button:hover {
     background-color: #46D7E8;
 }
 
-.modal-footer {
+.modal-footer, .register {
     .button{
         padding: 10px;
         font-size: 1.1rem;

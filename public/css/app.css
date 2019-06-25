@@ -11185,7 +11185,10 @@ a.text-dark:focus {
   border-bottom: solid 3px #46D7E8;
 }
 
-h2 {
+h1,
+h2,
+h3,
+h4 {
   color: #46D7E8;
 }
 
@@ -11207,7 +11210,8 @@ button:hover {
   background-color: #46D7E8;
 }
 
-.modal-footer .button {
+.modal-footer .button,
+.register .button {
   padding: 10px;
   font-size: 1.1rem;
 }

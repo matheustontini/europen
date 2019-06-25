@@ -15,3 +15,7 @@ Route::get('/', 'HomeController@index');
 Route::get('/listing', 'HomeController@listing');
 Route::get('/listing/single', 'HomeController@show');
 Route::get('/listing/create', 'ListingController@create');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
