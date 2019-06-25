@@ -16,16 +16,16 @@ class CreateListingFeaturesTable extends Migration
         Schema::create('ListingFeatures', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedInteger('user_id');
-            $table->unsignedDecimal('saleprice')->nullable;
-            $table->unsignedDecimal('rentalprice')->nullable;
-            $table->unsignedDecimal('totalsquaremeters')->nullable;
-            $table->unsignedInteger('rooms')->nullable;
-            $table->unsignedDecimal('bathrooms')->nullable;
-            $table->unsignedInteger('yearbuilt')->nullable;
+            $table->unsignedDecimal('saleprice')->nullable();
+            $table->unsignedDecimal('rentalprice')->nullable();
+            $table->unsignedDecimal('totalsquaremeters')->nullable();
+            $table->unsignedInteger('rooms')->nullable();
+            $table->unsignedDecimal('bathrooms')->nullable();
+            $table->unsignedInteger('yearbuilt')->nullable();
             $table->string('countryname');
             $table->string('cityname');
-            $table->string('zipcode')->nullable;
-            $table->string('mailaddress')->nullable;
+            $table->string('zipcode')->nullable();
+            $table->string('mailaddress')->nullable();
             $table->timestamps();
         });
     }
