@@ -1,0 +1,122 @@
+.home {
+    background-image: url('/img/home_img_01.jpg');
+    background-size: cover;
+    height: 100vh;
+    .search {
+        img {
+            
+        }
+        p {
+            font-size: 1.3rem;
+            color: #fff;
+            text-shadow: black 0.1em 0.1em 0.2em;
+        }
+        a {
+            display: block;
+            max-width: 300px;
+            background-color: #59C1FF;
+            margin: 10px;
+            padding: 30px;
+            border-radius: 50px;
+            color: #fff;
+            font-size: 1.5rem;
+        }
+        a:hover {
+            background-color: #46D7E8;
+            text-decoration: none;
+        }
+    }
+}
+.navbar {
+    background-color: rgba(255, 255, 255, 0.7);
+    height: 100px;
+    img {
+        width: 130px;
+    }
+    a {
+        font-size: 1.2rem;
+        color: rgb(129, 129, 129);
+    }
+    a:hover {
+        color: #59C1FF;
+        text-decoration: underline;
+    }
+}
+
+.listing {
+    font-size: 2rem;
+    input {
+        background: transparent;
+        border: 0px;
+        border-bottom: solid 3px #46D7E8;
+    }
+}
+h2 {
+    color: #46D7E8;
+}
+.house_h{
+    text-transform: uppercase;
+}
+.button {
+    background-color: #59C1FF;
+    margin: 10px;
+    padding: 30px;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 1.5rem;
+    border: 0px;
+}
+button:hover {
+    background-color: #46D7E8;
+}
+
+.modal-footer {
+    .button{
+        padding: 10px;
+        font-size: 1.1rem;
+    }
+}
+
+.footer {
+    background: linear-gradient(#46D7E8, #4DFFE0);
+    p {
+        color: #fff;
+        font-size: 1.1rem;
+    }
+}
+
+.layout {
+    margin-top: 130px;
+}
+
+.list_item {
+    background-size: cover;
+    height: 300px;
+    a {
+        background: #fff;
+        text-transform: uppercase;
+        color: #46D7E8;
+        font-size: 1.2rem;
+    }
+    a:hover {
+        text-decoration: none;
+        color: #59C1FF;
+    }
+}
+
+.btn_location {
+    background-color: #59C1FF;
+    padding: 7px;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 0.8rem;
+}
+.btn_location:hover {
+    background-color: #4DFFE0;
+    text-decoration: none;
+    color: #fff;
+}
+
+.carousel-inner {
+    max-height: 500px;
+}
