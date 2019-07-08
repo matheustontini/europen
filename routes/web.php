@@ -15,6 +15,7 @@ Route::get('/', 'HomeController@index');
 Route::get('/listing', 'HomeController@listing');
 Route::get('/listing/single', 'HomeController@show');
 Route::get('/listing/create', 'ListingController@create');
+Route::post('/listing/create', 'ListingController@store');
 
 Auth::routes();
 
