@@ -45,7 +45,7 @@
                 <label for="Offer Price">Offer Price</label>
                 <input type="text" class="form-control" placeholder="">
             </div>
-            <div class="form-group col-4">
+            <div class="form-group col-4"> 
                 <label for="Currency">Currency</label>     
                 <select id="dropdown" class="form-control">
                 <option selected>Choose...</option>
