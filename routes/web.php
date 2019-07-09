@@ -12,10 +12,11 @@
 */
 
 Route::get('/', 'HomeController@index');
+Route::get('/howitworks', 'HomeController@howitworks');
 Route::get('/listing', 'HomeController@listing');
-Route::get('/listing/single', 'HomeController@show');
+Route::get('/listing/single/{id}', 'ListingController@show');
 Route::get('/listing/create', 'ListingController@create');
-Route::post('/listing/create', 'ListingController@store');
+Route::post('/listing', 'ListingController@store');
 
 Auth::routes();
 

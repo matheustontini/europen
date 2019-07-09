@@ -38,9 +38,10 @@
         <div class="col-12 col-md-6">
             <h3>Features</h3>
             <ul>
-                <li>3 bedrooms</li>
+                <li><?= $features->rooms ?> bedrooms</li>
                 <li>Parking</li>
-                <li>2 bathrooms</li>
+                <li><?= $features->bathrooms ?> bathrooms</li>
+                <li><?= $features->totalsquaremeters ?> Square Meters</li>
             </ul>
         </div>
         <div class="col-12 col-md-6 d-flex align-items-end flex-row-reverse">

@@ -7,7 +7,11 @@ use Illuminate\Http\Request;
 
 class ListingController extends Controller
 {
-    public function store (Request $request) {
+    public function show($id) {
+        $features = ListingFeature::find($id);
+        return view('listing.single', compact('features'));
+    }
+    public function store(Request $request) {
         $listing = new ListingFeature();
         $listing->id = $request ->id;
         // $listing->user_id = Auth::user()->user_id;
@@ -28,7 +32,7 @@ class ListingController extends Controller
         return redirect(action('ListingController@create'));
 
     }
-    public function create () {
+    public function create() {
         return view('listing.create');
     }
 }

@@ -4,20 +4,10 @@
 <h1>Create a Listing</h1>
     <form method="post" action="{{ action('ListingController@store') }}">
     @csrf
-        <div class="row">
-            <div class="col">
-                <label for="First Name">First Name</label>
-                <input type="text" class="form-control" placeholder="Jane">
-            </div>
-            <div class="col">
-                <label for="Last Name">Last Name</label>
-                <input type="text" class="form-control" placeholder="Doe">
-            </div>
-        </div><br>
-            <div class="form-group">
-                <label for="Address">Address</label>
-                <input type="text" class="form-control" placeholder="1234 Main St." name="mailaddress">
-            </div>
+        <div class="form-group col-12">
+            <label for="Address">Address</label>
+            <input type="text" class="form-control" name="mailaddress">
+        </div>
         <div class="row">
             <div class="form-group col-md-4">
                 <label for="City">City</label>
