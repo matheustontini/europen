@@ -11143,7 +11143,7 @@ a.text-dark:focus {
 .home .search a {
   display: block;
   max-width: 300px;
-  background-color: #59C1FF;
+  background-color: #59c1ff;
   margin: 10px;
   padding: 30px;
   border-radius: 50px;
@@ -11152,7 +11152,7 @@ a.text-dark:focus {
 }
 
 .home .search a:hover {
-  background-color: #46D7E8;
+  background-color: #46d7e8;
   text-decoration: none;
 }
 
@@ -11171,7 +11171,7 @@ a.text-dark:focus {
 }
 
 .navbar a:hover {
-  color: #59C1FF;
+  color: #59c1ff;
   text-decoration: underline;
 }
 
@@ -11182,14 +11182,14 @@ a.text-dark:focus {
 .listing input {
   background: transparent;
   border: 0px;
-  border-bottom: solid 3px #46D7E8;
+  border-bottom: solid 3px #46d7e8;
 }
 
 h1,
 h2,
 h3,
 h4 {
-  color: #46D7E8;
+  color: #46d7e8;
 }
 
 .house_h {
@@ -11197,7 +11197,7 @@ h4 {
 }
 
 .button {
-  background-color: #59C1FF;
+  background-color: #59c1ff;
   margin: 10px;
   padding: 30px;
   border-radius: 50px;
@@ -11207,7 +11207,7 @@ h4 {
 }
 
 button:hover {
-  background-color: #46D7E8;
+  background-color: #46d7e8;
 }
 
 .modal-footer .button,
@@ -11217,7 +11217,7 @@ button:hover {
 }
 
 .footer {
-  background: linear-gradient(#46D7E8, #4DFFE0);
+  background: linear-gradient(#46d7e8, #4dffe0);
 }
 
 .footer p {
@@ -11237,17 +11237,17 @@ button:hover {
 .list_item a {
   background: #fff;
   text-transform: uppercase;
-  color: #46D7E8;
+  color: #46d7e8;
   font-size: 1.2rem;
 }
 
 .list_item a:hover {
   text-decoration: none;
-  color: #59C1FF;
+  color: #59c1ff;
 }
 
 .btn_location {
-  background-color: #59C1FF;
+  background-color: #59c1ff;
   padding: 7px;
   border-radius: 20px;
   color: #fff;
@@ -11255,12 +11255,53 @@ button:hover {
 }
 
 .btn_location:hover {
-  background-color: #4DFFE0;
+  background-color: #4dffe0;
   text-decoration: none;
   color: #fff;
 }
 
 .carousel-inner {
   max-height: 500px;
+}
+
+.number p {
+  background: #59c1ff;
+  border-radius: 50%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  font-weight: 600;
+  color: #fff;
+}
+
+.title {
+  padding-top: 10px;
+  padding-bottom: 15px;
+  color: #59c1ff;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 35px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  color: #59c1ff;
+  font-weight: bold;
+}
+
+.background-how-it {
+  background-image: url("/img/apartment-building.jpg");
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  padding: 25px 30px !important;
+}
+
+.background-how-it:hover {
+  opacity: 0.5;
 }
 
