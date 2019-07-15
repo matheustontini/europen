@@ -19,13 +19,17 @@ class CreateListingFeaturesTable extends Migration
             $table->unsignedDecimal('saleprice')->nullable();
             $table->unsignedDecimal('rentalprice')->nullable();
             $table->unsignedDecimal('totalsquaremeters')->nullable();
-            $table->unsignedInteger('rooms')->nullable();
+            $table->unsignedInteger('rooms');
             $table->unsignedDecimal('bathrooms')->nullable();
             $table->unsignedInteger('yearbuilt')->nullable();
             $table->string('countryname');
             $table->string('cityname');
             $table->string('zipcode')->nullable();
             $table->string('mailaddress')->nullable();
+            $table->string('neighborhood');
+            $table->string('type');
+            $table->string('rentorsell');
+            $table->text('description');
             $table->timestamps();
         });
     }
