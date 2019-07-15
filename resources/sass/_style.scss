@@ -134,11 +134,12 @@ button:hover {
         justify-content: center;
         font-weight: 600;
         color: #fff;
+        width: 30px;
+        height: 30px;
     }
 }
 
 .title {
-    padding-top: 10px;
     padding-bottom: 15px;
     color: #59c1ff;
     font-weight: bold;
@@ -163,4 +164,11 @@ button:hover {
 
 .background-how-it:hover {
     opacity: 0.5;
+}
+
+.links {
+    text-align: center;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
 }
