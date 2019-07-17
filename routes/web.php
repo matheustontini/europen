@@ -19,6 +19,8 @@ Route::get('/listing/create', 'ListingController@create');
 Route::post('/listing', 'ListingController@store');
 Route::get('/listing/user/listing', 'ListingController@userListing');
 
+Route::get('/appointment/{id}', 'AppointmentController@show'); 
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@home')->name('home');
