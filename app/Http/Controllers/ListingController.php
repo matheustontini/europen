@@ -73,8 +73,9 @@ class ListingController extends Controller
 
     public function userListing()
     {
-        $user_id = Auth::user()->user_id;
-        $listings = ListingFeature::where('user_id', 'LIKE', "{$user_id}")->get();
+        $user_id = \Auth::id();
+        $listings = ListingFeature::where('user_id', $user_id)->get();
+       
 
         return view('pages.mylistings', compact('listings'));
     }
