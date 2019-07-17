@@ -12,4 +12,9 @@ class ListingFeature extends Model
     {
         return $this->hasMany('App\Image');
     }
+
+    public function firstImage()
+    {
+        return $this->images()->first();
+    }
 }

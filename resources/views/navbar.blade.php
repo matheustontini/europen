@@ -9,10 +9,10 @@
             <a class="nav-link" href="/listing">listing</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">how it works</a>
+            <a class="nav-link" href="/howitworks">how it works</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/login">login</a>
+            <?= auth()->check() ? '<a class="nav-link" href="/home">panel</a>' : '<a class="nav-link" href="/login">login</a>' ?> 
         </li>
     </ul>
 </nav>

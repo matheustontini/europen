@@ -13,7 +13,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        //$this->middleware('auth');
+        $this->middleware('auth')->only('home');
     }
 
     /**
@@ -26,8 +26,18 @@ class HomeController extends Controller
         return view('home');
     }
 
+    public function home()
+    {
+        return view('pages.home');
+    }
+
     public function howitworks()
     {
         return view('pages.howitworks');
+    }
+    public function logout()
+    {
+        Auth::logout();
+        return view('pages.home');
     }
 }

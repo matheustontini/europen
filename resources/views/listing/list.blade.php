@@ -13,7 +13,7 @@
         @else
         @foreach ($listings as $listing)
         <div class="col-12 col-md-6 col-lg-4" >
-            <div class="list_item mt-3 mb-2 mx-3 d-flex align-items-end flex-row-reverse" style="background-image: url('<?= $listing->images ?>')">
+            <div class="list_item mt-3 mb-2 mx-3 d-flex align-items-end flex-row-reverse" style="background-image: url('<?= $listing->firstImage() ? $listing->firstImage()->image : '/img/no_image.jpg' ?>')">
                 <a href="/listing/single/<?= $listing->id ?>"><?= $listing->type . " " . $listing->bathrooms . " BEDROOMS " . $listing->neighborhood ?></a>
             </div>
             <a href="/listing?search=<?= $listing->cityname ?>" class="btn_location ml-3 mb-3"><?= $listing->cityname ?></a>

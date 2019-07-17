@@ -8,11 +8,17 @@ use Illuminate\Http\Request;
 
 class ListingController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth')->only('create');
+    }
+
     public function show($id) 
     {
         $features = ListingFeature::find($id);
         return view('listing.single', compact('features'));
     }
+
     public function store(Request $request) 
     {
 
@@ -53,17 +59,24 @@ class ListingController extends Controller
         return redirect(action('ListingController@listing'));
 
     }
+
     public function create() 
     {
         return view('listing.create');
     }
+
     public function listing(Request $request)
     {
         $listings = ListingFeature::where('cityname', 'LIKE', "%{$request->search}%")->get();
-        // $listings = ListingFeature::all();
-
         return view('listing.list', compact('listings'));
     }
 
+    public function userListing()
+    {
+        $user_id = Auth::user()->user_id;
+        $listings = ListingFeature::where('user_id', 'LIKE', "{$user_id}")->get();
+
+        return view('pages.mylistings', compact('listings'));
+    }
 }
 ?>

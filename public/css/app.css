@@ -11309,7 +11309,10 @@ button:hover {
 .links {
   text-align: center;
   width: 100%;
-  text-align: center;
   padding: 10px;
+}
+
+.panel {
+  font-size: 1.5rem;
 }
 
