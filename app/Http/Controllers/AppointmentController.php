@@ -17,6 +17,11 @@ class AppointmentController extends Controller
         return view('pages/appointment');
     }
 
+    public function index ()
+    {
+        Mail::to('europen-acdc0c@inbox.mailtrap.io')->send(new Mailtrap($order));
+    }
+
 }
 
 ?>
