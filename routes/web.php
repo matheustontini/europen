@@ -22,5 +22,6 @@ Route::get('/listing/user/{id}', 'HomeController@edit');
 Route::post('/listing/user/{id}', 'HomeController@update');
 Route::get('/listing/{id}/edit', 'ListingController@edit');
 Route::post('/listing/{id}/edit', 'ListingController@update');
+Route::get('/appointment/{id}', 'AppointmentController@show'); 
 Auth::routes();
 Route::get('/home', 'HomeController@home')->name('home');
