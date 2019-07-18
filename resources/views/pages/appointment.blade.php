@@ -53,6 +53,7 @@
             <label for="textarea">Additional Comments:</label>
             <textarea
               class="form-control rounded-0"
+
               id="exampleFormControlTextarea1"
               rows="5"
             ></textarea>
@@ -63,14 +64,5 @@
           </div>
         </div>
       </form> 
-      
-      
-      <div class="row">
-          <div class="col-6">
-              <h3>Get Support</h3>
-              <h3>We're Here to Help!</h3>
-              <hr style="border: 4px;" />
-          </div>
-      </div>
 </div>
 @endsection
