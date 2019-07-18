@@ -1,5 +1,9 @@
 @extends('layout')
 
+
+{{-- $firstName = $lastName = $appointmentDate = $checkIn = $checkOut = $textArea ""; --}}
+
+
 @section('content')
 <div class="container-fluid">
     <form>
@@ -21,12 +25,12 @@
           <div class="row">
             <div class="form-group col-6">
               <label for="firstName">First Name</label>
-              <input type="name" class="form-control" id="" placeholder="" />
+              <input type="name" class="form-control" id="firstName" placeholder="" />
             </div>
   
             <div class="form-group col-6">
               <label for="lastName">Last Name</label>
-              <input type="name" class="form-control" id="" placeholder="" />
+              <input type="name" class="form-control" id="lastName" placeholder="" />
             </div>
           </div>
           <div class="row">
@@ -35,17 +39,18 @@
               <input
                 type="date"
                 class="form-control"
+                id="appointmentDate"
               />
             </div>
   
             <div class="form-group col-4">
               <label for="Check-in">Check-in Time</label>
-              <input type="time" class="form-control" id="" placeholder="00:00" />
+              <input type="time" class="form-control" id="checkIn" placeholder="00:00" />
             </div>
   
             <div class="form-group col-4">
               <label for="Check-out">Check-out Time</label>
-              <input type="time" class="form-control" id="" placeholder="00:00" />
+              <input type="time" class="form-control" id="checkOut" placeholder="00:00" />
             </div>
           </div>
   
@@ -53,8 +58,7 @@
             <label for="textarea">Additional Comments:</label>
             <textarea
               class="form-control rounded-0"
-
-              id="exampleFormControlTextarea1"
+              id="textArea"
               rows="5"
             ></textarea>
           </div>

@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Mail;
 use Illuminate\Http\Request;
 use App\AppointmentFeature;
+use App\Mail\OrderShipped;
 
 class AppointmentController extends Controller
 {
@@ -19,7 +21,7 @@ class AppointmentController extends Controller
 
     public function index ()
     {
-        Mail::to('europen-acdc0c@inbox.mailtrap.io')->send(new Mailtrap($order));
+        Mail::to('europen-acdc0c@inbox.mailtrap.io')->send(new OrderShipped());
     }
 
 }

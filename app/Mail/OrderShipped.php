@@ -7,6 +7,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
+
 class OrderShipped extends Mailable
 {
     use Queueable, SerializesModels;
@@ -31,6 +32,6 @@ class OrderShipped extends Mailable
         // return $this->from('example@example.com')
         // ->view('emails.orders.shipped');
 
-        return $this->view('view.name')->to('europen-acdc0c@inbox.mailtrap.io');
+        return $this->view('mail/mail');
     }
 }
