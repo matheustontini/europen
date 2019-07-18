@@ -2,7 +2,7 @@
 @section('content')
 
 <h1>Create a Listing</h1>
-    <form method="post" action="{{ action('ListingController@store') }}">
+    <form method="post" action="{{ action('ListingController@store') }}" enctype="multipart/form-data">
     @csrf
     <div class="row">
         <div class="form-group col-12">
@@ -89,8 +89,9 @@
             <div class="col-12">
                 <label for="image">Images</label>
                 <div id="image">
-                    <input type="text" class="form-control" placeholder="URL" name="image[0]">
+                    <input type="file" class="form-control" placeholder="URL" name="image[0]">
                 </div>
+                
                 <input type="button" onClick="createImage()" value="+" id="but" class="btn btn-secondary mt-2">
             </div>
         </div>
@@ -109,6 +110,7 @@
         const image = document.getElementById("image");
         const imageIn = document.createElement('input');
         imageIn.className = 'form-control mt-2';
+        imageIn.type = 'file';
         imageIn.placeholder = 'URL';
         imageIn.name = 'image['+ (i) +']';
         image.appendChild(imageIn);

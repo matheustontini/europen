@@ -21,13 +21,12 @@ class ListingController extends Controller
 
     public function store(Request $request) 
     {
-
         $listing = new ListingFeature();
         $listing->description = $request->description;
         $listing->type = $request->type;
         $listing->neighborhood = $request->neighborhood;
         $listing->rentorsell = $request->rentorsell;
-        $listing->user_id = '1';
+        $listing->user_id = auth()->id();
         $listing->totalsquaremeters = $request->totalsquaremeters;
         $listing->rooms= $request->rooms;
         $listing->bathrooms = $request->bathrooms;
@@ -45,11 +44,11 @@ class ListingController extends Controller
 
         $listing->save();
         
-        foreach ($request->image as $image) {        
+        foreach ($request->image as $image) {  
             $pic = new Image();
-            $pic->user_id = '1';
+            $pic->user_id = auth()->id();
             $pic->listing_feature_id = $listing->id;
-            $pic->image = $image;
+            $pic->image = "/uploads/" . $image->store('imgs', 'uploads');
             $pic->save();
         }
 
@@ -92,7 +91,7 @@ class ListingController extends Controller
         $listing->type = $request->type;
         $listing->neighborhood = $request->neighborhood;
         $listing->rentorsell = $request->rentorsell;
-        $listing->user_id = '1';
+        $listing->user_id = auth()->id();
         $listing->totalsquaremeters = $request->totalsquaremeters;
         $listing->rooms= $request->rooms;
         $listing->bathrooms = $request->bathrooms;
@@ -113,7 +112,7 @@ class ListingController extends Controller
         $i = 0;
         foreach ($request->image as $image) {     
             $pic = Image::find($request->id);   
-            $pic->image = $image[$i];
+            $pic->image = "/uploads/" . $image->store('imgs', 'uploads');
             $pic->save();
             $i++;
         }
