@@ -94,7 +94,7 @@
                 <div id="image">
                     <?php $i = 0; ?>
                     @foreach ($listing->images as $image) 
-                        <input type="text" class="form-control mt-2" placeholder="URL" name="image[<?= $i ?>]" value="{{ $image->image }}">
+                        <input type="file" class="form-control mt-2" placeholder="URL" name="image[<?= $i ?>]" value="{{ $image->image }}">
                         <?php $i++; ?>
                     @endforeach
                 </div>
