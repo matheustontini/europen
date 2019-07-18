@@ -1,3 +1,4 @@
+<?php $id = \Auth::id(); ?>
 @extends('layout')
 
 @section('content')
@@ -9,9 +10,12 @@
         <ul class="panel">
             <li><a href="/listing/user/listing">My listings</a></li>
             <li><a href="/listing/create">Create a new listing</a></li>
-            <li><a href="">Edit profile</a></li>
+            <li><a href="/listing/user/<?= $id ?>">Edit profile</a></li>
         </ul>
-        <a href="#" class="btn_location">Log out</a>
+        <form method="post" action="{{ action('Auth\LoginController@logout') }}" class="register">
+            @csrf
+            <button type="submit" class="button">Log out</button>
+        </form>
     </div>
 </div>
 

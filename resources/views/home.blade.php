@@ -17,7 +17,7 @@
         <div class="search text-center">
             <img src="/img/logo.png" class="img-fluid" alt="eurOpen">
             <p>An easy way to find your new home in Europe!</p>
-            <div class="d-flex justify-content-center"><a href="#" class="button">Browse Listings</a></div>
+            <div class="d-flex justify-content-center"><a href="/listing" class="button">Browse Listings</a></div>
         </div>
         
     </div>

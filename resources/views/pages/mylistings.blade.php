@@ -8,7 +8,7 @@
     <div class="col-12">
         <ul class="panel">
             @foreach ($listings as $listing)
-            <li><?= $listing->type . " " . $listing->bathrooms . " BEDROOMS " . $listing->neighborhood ?> <a href="" class="btn_location">Edit</a></li>
+            <li><?= $listing->type . " " . $listing->bathrooms . " BEDROOMS " . $listing->neighborhood ?> <a href="/listing/<?= $listing->id ?>/edit" class="btn_location">Edit</a></li>
             @endforeach
         </ul>
         <a href="/home" class="btn_location">Back to panel</a>

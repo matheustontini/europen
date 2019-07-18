@@ -10,7 +10,7 @@ class ListingController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth')->only('create');
+        $this->middleware('auth')->only('create', 'userListing', 'edit');
     }
 
     public function show($id) 
@@ -23,7 +23,6 @@ class ListingController extends Controller
     {
 
         $listing = new ListingFeature();
-        // $listing->user_id = Auth::user()->user_id;
         $listing->description = $request->description;
         $listing->type = $request->type;
         $listing->neighborhood = $request->neighborhood;
@@ -79,5 +78,47 @@ class ListingController extends Controller
 
         return view('pages.mylistings', compact('listings'));
     }
+
+    public function edit($id)
+    {
+        $listing = ListingFeature::find($id);
+        return view('listing.edit', compact('listing'));
+    }
+
+    public function update(Request $request)
+    {
+        $listing = ListingFeature::find($request->id);
+        $listing->description = $request->description;
+        $listing->type = $request->type;
+        $listing->neighborhood = $request->neighborhood;
+        $listing->rentorsell = $request->rentorsell;
+        $listing->user_id = '1';
+        $listing->totalsquaremeters = $request->totalsquaremeters;
+        $listing->rooms= $request->rooms;
+        $listing->bathrooms = $request->bathrooms;
+        $listing->yearbuilt = $request->yearbuilt;
+        $listing->countryname = $request->countryname;
+        $listing->cityname = $request->cityname;
+        $listing->zipcode = $request->zipcode;
+        $listing->mailaddress = $request->mailaddress;
+
+        if ($request->rentorsell == 'rent') {
+            $listing->rentalprice = $request->price;
+        } else {
+            $listing->saleprice = $request->price;
+        }
+
+        $listing->save();
+
+        $i = 0;
+        foreach ($request->image as $image) {     
+            $pic = Image::find($request->id);   
+            $pic->image = $image[$i];
+            $pic->save();
+            $i++;
+        }
+
+        return redirect(action('ListingController@userListing'));
+    } 
 }
 ?>
