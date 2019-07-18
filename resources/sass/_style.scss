@@ -174,7 +174,47 @@ button:hover {
 
 //panel
 .panel {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    list-style-type: none;
+    li {
+        background-color: #59c1ff;
+        padding: 10px;
+        border-radius: 20px;
+        margin: 10px;
+        text-transform: uppercase;
+        color: #fff;
+        display: flex;
+        a {
+            color: #fff;
+        }
+        a:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+    li:hover {
+        background-color: #46d7e8;
+    }
+    .delete-btn {
+        background-color: #e94c4c;
+        padding: 7px;
+        border-radius: 20px;
+        color: #fff;
+        font-size: 0.8rem;
+        border: 0px;
+        text-transform: uppercase;
+        margin-left: 10px;
+    }
+    .delete-btn:hover {
+        background-color: #7a7a7a;
+    }
+    .btn_location {
+        background-color: #c9c9c9;
+        margin-left: 10px;
+    }
+    .btn_location:hover {
+        background-color: #7a7a7a;
+    }
 }
 
 //appointment: Daniela

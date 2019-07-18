@@ -11313,7 +11313,56 @@ button:hover {
 }
 
 .panel {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  list-style-type: none;
+}
+
+.panel li {
+  background-color: #59c1ff;
+  padding: 10px;
+  border-radius: 20px;
+  margin: 10px;
+  text-transform: uppercase;
+  color: #fff;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.panel li a {
+  color: #fff;
+}
+
+.panel li a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.panel li:hover {
+  background-color: #46d7e8;
+}
+
+.panel .delete-btn {
+  background-color: #e94c4c;
+  padding: 7px;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 0.8rem;
+  border: 0px;
+  text-transform: uppercase;
+  margin-left: 10px;
+}
+
+.panel .delete-btn:hover {
+  background-color: #7a7a7a;
+}
+
+.panel .btn_location {
+  background-color: #c9c9c9;
+  margin-left: 10px;
+}
+
+.panel .btn_location:hover {
+  background-color: #7a7a7a;
 }
 
 .button__style {

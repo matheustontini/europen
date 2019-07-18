@@ -18,6 +18,7 @@ Route::get('/listing/single/{id}', 'ListingController@show');
 Route::get('/listing/create', 'ListingController@create');
 Route::post('/listing', 'ListingController@store');
 Route::get('/listing/user/listing', 'ListingController@userListing');
+Route::post('/listing/user/listing', 'ListingController@destroy');
 Route::get('/listing/user/{id}', 'HomeController@edit');
 Route::post('/listing/user/{id}', 'HomeController@update');
 Route::get('/listing/{id}/edit', 'ListingController@edit');

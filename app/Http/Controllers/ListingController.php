@@ -120,5 +120,13 @@ class ListingController extends Controller
 
         return redirect(action('ListingController@userListing'));
     } 
+
+    public function destroy(Request $request)
+    {
+        $listing = ListingFeature::find($request->id);
+        $listing->delete();
+
+        return redirect(action('ListingController@userListing'));
+    }
 }
 ?>
