@@ -13,14 +13,10 @@ class AppointmentController extends Controller
 
     public function show($id) 
     {
-        $features = AppointmentFeature::find($id);
-        return view('appointment', compact('features'));
+      
+        return view('pages/appointment');
     }
 
-    public function store(Request $request) 
-    {
-
-    }
 }
 
 ?>
