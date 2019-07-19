@@ -10,7 +10,7 @@ use App\Mail\OrderShipped;
 class AppointmentController extends Controller
 {
     public function __construct() {
-        $this->middleware('auth')->only('create');
+        $this->middleware('auth');
     }
 
     public function show($id) 
@@ -21,7 +21,7 @@ class AppointmentController extends Controller
 
     public function index ()
     {
-        Mail::to('europen-acdc0c@inbox.mailtrap.io')->send(new OrderShipped());
+        Mail::to('europen-acdc0c@inbox.mailtrap.io')->send(new Mailtrap());
     }
 
 }

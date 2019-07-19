@@ -1,9 +1,6 @@
 @extends('layout')
 
 
-{{-- $firstName = $lastName = $appointmentDate = $checkIn = $checkOut = $textArea ""; --}}
-
-
 @section('content')
 <div class="container-fluid">
     <form>

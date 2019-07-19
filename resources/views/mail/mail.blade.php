@@ -9,12 +9,6 @@
 <body>
     <h1>This is a test email</h1>
 
-<p>{{$firstName}}</p>
-<p>{{$lastName}}</p>
-<p>{{$appointmentDate}}</p>
-<p>{{$checkIn}}</p>
-<p>{{$checkOut}}</p>
-<p>{{$textArea}}</p>
 
 </body>
 </html>
