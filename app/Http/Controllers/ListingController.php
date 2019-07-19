@@ -109,13 +109,13 @@ class ListingController extends Controller
 
         $listing->save();
 
-        $i = 0;
-        foreach ($request->image as $image) {     
-            $pic = Image::find($request->id);   
-            $pic->image = "/uploads/" . $image->store('imgs', 'uploads');
-            $pic->save();
-            $i++;
-        }
+        // $i = 0;
+        // foreach ($request->image as $image) {     
+        //     $pic = Image::find($request->id);   
+        //     $pic->image = "/uploads/" . $image->store('imgs', 'uploads');
+        //     $pic->save();
+        //     $i++;
+        // }
 
         return redirect(action('ListingController@userListing'));
     } 
